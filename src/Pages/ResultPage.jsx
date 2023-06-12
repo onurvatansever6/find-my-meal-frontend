@@ -24,11 +24,6 @@ function ResultPage() {
     const ingredients = new URLSearchParams(location.search).get('ingredients');
     const [recipes, setRecipes] = useState([]);
 
-    const handleSearchSubmit = (selectedIngredients) => {
-        const newQueryString = encodeURIComponent(selectedIngredients.join(','));
-        window.history.replaceState(null, '', `/results?ingredients=${newQueryString}`);
-    };
-
     useEffect(() => {
         const selectedIngredients = ingredients ? ingredients.split(',') : [];
         const filteredRecipes = RecipesData.filter((recipe) => {
@@ -45,7 +40,7 @@ function ResultPage() {
     return (
         <>
             <center className="flexBody">
-                <SearchBar onSubmit={handleSearchSubmit} />
+                <SearchBar />
                 <p>Selected Ingredients: {ingredients}</p>
                 <Link to="/" style={buttonStyle}>Go back to home</Link>
             </center>
