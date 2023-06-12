@@ -1,7 +1,6 @@
 .recipe-page {
     display: grid;
     height: 90vh;
-    overflow: hidden;
     grid-template-columns: 1.75fr 1.25fr;
 }
 
