@@ -1,0 +1,11 @@
+.flexBody {
+    margin-top: 3rem;
+    margin-right: 30rem;
+    margin-left: 30rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.recipe-card {
+    max-width: 300px;
+}
